@@ -1,4 +1,5 @@
 import React from 'react';
+import Issue from './issue'
 
 class IssueList extends React.Component {
     constructor(props) {
@@ -17,10 +18,8 @@ class IssueList extends React.Component {
         const { data } = this.state;
         return (
             <ul>
-                {data.map(item =>
-                    <li key={item.title}>
-                        {item.title}>
-                    </li>
+                {data.map(issue =>
+                    <Issue key={issue.id}></Issue>
                 )}
             </ul>
         );
