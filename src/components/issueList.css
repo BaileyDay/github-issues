@@ -1,0 +1,33 @@
+html {
+    background-color: #dadbdc;
+    
+}
+
+.IssueCard {
+    margin: 1%;
+    box-shadow: 3px 3px 8px black;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: white;
+    
+}
+
+.IssueCard a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    background-color: #eaebeb;
+    
+
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+}
+

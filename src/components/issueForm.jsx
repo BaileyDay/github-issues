@@ -1,16 +1,12 @@
 import React from 'react';
+import './issueList.css'
 
-const IssueForm = ({ issue: { url, title, body, user } }) => {
+const IssueForm = ({ issue: { html_url, title, body, user } }) => {
     return (
-        <div>
-            <a href={url}>
-                <h3>
-                    <strong>
-                        <br />
-                        {title}
-                    </strong>
-                </h3>
-            </a>
+        <div className="IssueCard">
+            <h4>
+                Issue: <a href={html_url} id="IssueTitle"><strong>{title}</strong></a>
+            </h4>
             <h4>
                 Submitted by: <a href={user.url}>{user.login}</a>
             </h4>
@@ -22,7 +18,7 @@ const IssueForm = ({ issue: { url, title, body, user } }) => {
                 </strong>{' '}
                 {body}
             </p> */}
-            <hr />
+
         </div>
     );
 };

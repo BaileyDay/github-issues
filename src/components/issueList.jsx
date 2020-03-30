@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Issues from './issue';
+import './issueList.css'
 
 class App extends Component {
     state = {
@@ -24,7 +25,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className='App'>
+            <div className='IssueList'>
                 <h1>Create React App Issue Board</h1>
                 <Issues issues={this.state.issues} />
             </div>
