@@ -1,4 +1,6 @@
+import './issueDetail.css'
 import React, { Component } from 'react';
+const ReactMarkdown = require('react-markdown/with-html')
 
 
 
@@ -29,9 +31,11 @@ class IssueDetail extends Component {
 
     render() {
         return (
-            <div className='IssueList'>
+            <div>
                 <h1>Create React App Issue Board</h1>
-                {this.state.issues.body}
+                <div className='IssueDetail'>
+                    {<ReactMarkdown source={this.state.issues.body} escapeHtml={false} />}
+                </div>
 
             </div>
         );
