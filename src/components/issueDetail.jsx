@@ -8,9 +8,10 @@ class IssueDetail extends Component {
     };
 
     async componentDidMount() {
+        const number = (this.props.location.pathname)
         try {
             const res = await fetch(
-                'https://api.github.com/repos/facebook/create-react-app/issues'
+                `https://api.github.com/repos/facebook/create-react-app${number}`
             );
             const data = await res.json();
             this.setState({
@@ -21,6 +22,7 @@ class IssueDetail extends Component {
                 data: error.message
             });
         }
+        console.log(this.state.issues)
 
     }
 
@@ -29,9 +31,8 @@ class IssueDetail extends Component {
         return (
             <div className='IssueList'>
                 <h1>Create React App Issue Board</h1>
-                {this.state.issues.map(issue => (
-                    console.log(issue.title)
-                ))}
+                {this.state.issues.body}
+
             </div>
         );
     }
