@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Issues from './issue';
-import './issueList.css'
 
-class IssueList extends Component {
+
+
+class IssueDetail extends Component {
     state = {
         issues: []
     };
@@ -21,16 +21,20 @@ class IssueList extends Component {
                 data: error.message
             });
         }
+
     }
+
 
     render() {
         return (
             <div className='IssueList'>
                 <h1>Create React App Issue Board</h1>
-                <Issues issues={this.state.issues} />
+                {this.state.issues.map(issue => (
+                    console.log(issue.title)
+                ))}
             </div>
         );
     }
 }
 
-export default IssueList;
+export default IssueDetail;
